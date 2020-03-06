@@ -1,6 +1,8 @@
 include ../icon/icon
 
 mixin button(props)
+	- props = typeof props != 'undefined' ? props : {}
+
 	- var mods = props.mods || {}
 	- var tag = props.attrs && props.attrs.href ? 'a' : 'button'
 	- var data = props.data || {}
@@ -17,5 +19,6 @@ mixin button(props)
 		if icon
 			.button__icon(class="button__icon_type_#{icon}")
 				+icon(icon, true)
+
 		span.button__text
 			block

@@ -2,21 +2,26 @@ include ../logo/logo
 include ../button/button
 include ../page-trim/page-trim
 
-mixin header(data)
+mixin header(props)
+	- props = typeof props != 'undefined' ? props : {}
+
+	- var data = props.data || {}
 	- var actions = data.actions || undefined
 
-	+b.HEADER.header&attributes(attributes)
+	header.header
 		+page-trim
-			+e({b: 'header'}).content
+			.header__content
 				+logo({
-					link: '/start-screen.html',
+					attrs: {
+						href: '/start-screen.html',
+					}
 				})
 
 				if actions
-					+e({b: 'header'}).UL.actions
+					ul.header__actions
 						each action in actions
-							+e({b: 'header'}).LI.action-item
-								+e({b: 'header'}).action
+							li.header__action-item
+								.header__action
 									+button({
 										mods: {
 											theme: 'navigation',

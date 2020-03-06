@@ -3,7 +3,5 @@ mixin form__field(props)
 
 	- var mods = props.mods || {}
 
-	.form__field(
-		class= mods.type ? 'form__field_type_#{mods.type}' : ""
-	)
+	.form__field(class= mods.type ? 'form__field_type_#{mods.type}' : "")
 		block

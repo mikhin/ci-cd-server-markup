@@ -1,7 +1,11 @@
-mixin logo(data)
-	- var link = data.link || ''
+mixin logo(props)
+	- props = typeof props != 'undefined' ? props : {}
 
-	if link
-		+b.A.logo_type_link&attributes(attributes)(href=link) School CI server
+	- var attrs = props.attrs || {}
+
+	if attrs.href
+		a.logo(
+			class='logo_type_link'
+		)&attributes(attrs) School CI server
 	else
-		+b.SPAN.logo&attributes(attributes) School CI server
+		span.logo School CI server

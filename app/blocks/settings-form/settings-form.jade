@@ -6,26 +6,40 @@ include ../text-input/text-input
 include ../field-label/field-label
 
 mixin settings-form()
-	+b.settings-form&attributes(attributes)
+	.settings-form
 		+form({
-			title: "Settings",
-			description: "Configure repository connection and synchronization settings.",
+			data: {
+				title: "Settings",
+				description: "Configure repository connection and synchronization settings.",
+			}
 		})
 			+form__field
 				+text-input({
-					placeholder: 'user-name/repo-name',
-					label: 'GitHub repository ',
-					required: true,
+					attrs: {
+						placeholder: 'user-name/repo-name',
+						required: true,
+					},
+					data: {
+						label: 'GitHub repository ',
+					}
 				})
 			+form__field
 				+text-input({
-					placeholder: 'npm ci && npm run build',
-					label: 'Build command'
+					attrs: {
+						placeholder: 'npm ci && npm run build',
+					},
+					data: {
+						label: 'Build command'
+					}
 				})
 			+form__field
 				+text-input({
-					placeholder: 'master',
-					label: 'Main branch'
+					attrs: {
+						placeholder: 'master',
+					},
+					data: {
+						label: 'Main branch'
+					}
 				})
 			+form__field({
 				mods: {
@@ -33,11 +47,15 @@ mixin settings-form()
 				}
 			})
 				+text-input({
-					placeholder: '10',
-					label: 'Synchronize every',
-					note: 'minutes',
+					attrs: {
+						placeholder: '10',
+					},
 					mods: {
 						type: 'time'
+					},
+					data: {
+						label: 'Synchronize every',
+						note: 'minutes',
 					}
 				})
 			+form__actions

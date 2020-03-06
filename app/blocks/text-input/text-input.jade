@@ -1,17 +1,19 @@
-mixin text-input(data)
-	- var placeholder = data.placeholder || ''
-	- var required = data.required || false
+mixin text-input(props)
+	- props = typeof props != 'undefined' ? props : {}
+
+	- var mods = props.mods || {}
+	- var data = props.data || {}
+	- var tag = props.tag || 'div'
+	- var attrs = props.attrs || {}
+
 	- var label = data.label || ''
 	- var note = data.note || ''
-	- var mods = data.mods || {}
+	- var required = attrs.required || false
 
-	+b(
-		class= (mods.type && 'text-input_type_#{mods.type}') || 'text-input'
-	)&attributes(attributes)
-		+field-label({
-			required: required,
-			text: label
-		})
-		+e.INPUT.content(placeholder != placeholder)
+	.text-input(class= (mods.type && 'text-input_type_#{mods.type}') || 'text-input')
+		+field-label({mods: {required: required}})= label
+
+		input.text-input__content&attributes(attrs)
+
 		if note
-			+e.SPAN.note= note
+			span.text-input__note= note

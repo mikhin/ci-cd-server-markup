@@ -1,7 +1,7 @@
 mixin welcome-action()
-	+b.welcome-action&attributes(attributes)
-		+e.description Configure repository connection and synchronization settings
-		+e.action
+	.welcome-action
+		p.welcome-action__description Configure repository connection and synchronization settings
+		.welcome-action__action
 			+button({
 				mods: {
 					theme: 'primary',
