@@ -1,0 +1,12 @@
+mixin welcome-action()
+	+b.welcome-action&attributes(attributes)
+		+e.description Configure repository connection and synchronization settings
+		+e.action
+			+button({
+				mods: {
+					theme: 'primary',
+				},
+				attrs: {
+					href: '/settings.html',
+				}
+			}) Open settings

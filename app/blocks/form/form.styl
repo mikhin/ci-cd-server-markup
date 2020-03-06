@@ -1,0 +1,45 @@
+.form
+	display block
+
+.form__title
+	font-weight 700
+	font-size 15px
+	line-height 20px
+	color #000000
+	margin 0
+	margin-bottom 8px
+
+.form__description
+	margin 0
+	font-size 13px
+	line-height 18px
+	color #7F8285
+	margin-bottom 12px
+
+	@media (min-width 1024px)
+		margin-bottom 20px
+
+.form__field
+	&:not(:last-child)
+		margin-bottom 16px
+
+.form__field_type_time
+	@media (min-width 1024px)
+		margin-top 20px
+
+.form__actions
+	display flex
+	flex-direction column
+	margin-top 20px
+
+	@media (min-width 1024px)
+		flex-direction row
+		margin-top 24px
+
+.form__action
+	&:not(:last-child)
+		margin-bottom 12px
+
+		@media (min-width 1024px)
+			margin-right 8px
+

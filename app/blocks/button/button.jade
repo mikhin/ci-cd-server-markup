@@ -1,0 +1,21 @@
+include ../icon/icon
+
+mixin button(props)
+	- var mods = props.mods || {}
+	- var tag = props.attrs && props.attrs.href ? 'a' : 'button'
+	- var data = props.data || {}
+	- var attrs = props.attrs || {}
+
+	- var icon = data.icon || false
+
+	#{tag}.button(
+		class= mods.theme ? 'button_theme_#{mods.theme}' : ""
+		class= mods.type ? 'button_type_#{mods.type}' : ""
+		class= icon ? 'button_iconed' : ""
+		class= tag === 'a' ? 'button_type_link' : ""
+	)&attributes(attrs)
+		if icon
+			.button__icon(class="button__icon_type_#{icon}")
+				+icon(icon, true)
+		span.button__text
+			block

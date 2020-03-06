@@ -1,0 +1,11 @@
+mixin footer()
+	- var items = getData('footer-menu');
+
+	+b.FOOTER.footer&attributes(attributes)
+		+page-trim
+			+e({b: 'footer'}).content
+				+e({b: 'footer'}).UL.menu
+					each item in items
+						+e({b: 'footer'}).LI.menu-item
+							+e({b: 'footer'}).A.menu-item-content(href="javascript:void(0)")= item
+				+e({b: 'footer'}).P.logo &copy; 2020 Yuri Mikhin

@@ -1,0 +1,7 @@
+mixin logo(data)
+	- var link = data.link || ''
+
+	if link
+		+b.A.logo_type_link&attributes(attributes)(href=link) School CI server
+	else
+		+b.SPAN.logo&attributes(attributes) School CI server

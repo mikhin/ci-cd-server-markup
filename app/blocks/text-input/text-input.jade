@@ -1,0 +1,17 @@
+mixin text-input(data)
+	- var placeholder = data.placeholder || ''
+	- var required = data.required || false
+	- var label = data.label || ''
+	- var note = data.note || ''
+	- var mods = data.mods || {}
+
+	+b(
+		class= (mods.type && 'text-input_type_#{mods.type}') || 'text-input'
+	)&attributes(attributes)
+		+field-label({
+			required: required,
+			text: label
+		})
+		+e.INPUT.content(placeholder != placeholder)
+		if note
+			+e.SPAN.note= note

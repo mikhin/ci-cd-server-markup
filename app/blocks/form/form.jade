@@ -1,0 +1,11 @@
+mixin form(data)
+	+b.FORM.form&attributes(attributes)
+		- var title = data.title || ''
+		- var description = data.description || ''
+
+		if title
+			+e({tag: 'h2'}).title= title
+		if description
+			+e.P.description= description
+
+		block

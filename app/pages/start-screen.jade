@@ -1,0 +1,16 @@
+extends /blocks/layout-default/layout-default
+include ../blocks/start-screen-layout/start-screen-layout
+include ../blocks/start-screen-layout/start-screen-layout__welcome-action
+include ../blocks/welcome-action/welcome-action
+
+block head
+	- var pageTitle = 'Start screen';
+
+block header
+	- var headerActions = getData('start-screen-page-header-actions');
+
+block content
+	+start-screen-layout
+		+page-trim
+			+start-screen-layout__welcome-action
+				+welcome-action

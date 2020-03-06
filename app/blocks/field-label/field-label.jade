@@ -1,0 +1,7 @@
+mixin field-label(data)
+	- var text = data.text || ''
+	- var required = data.required || false
+
+	+b.LABEL(
+		class=`field-label${required ? '_required' : ''}`
+	)&attributes(attributes)= text

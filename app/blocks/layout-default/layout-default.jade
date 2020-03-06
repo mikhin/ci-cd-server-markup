@@ -1,11 +1,21 @@
 include /../node_modules/bemto.jade/bemto
 include /../node_modules/jade-injected/jade-injected
 include ../page/page
+include ../header/header
+include ../footer/footer
 include ../scripts/scripts
 
 doctype html
 html(lang='ru')
 	include ../head/head
 	+page
-		block content
+		+e.header
+			block header
+			+header({
+				actions: headerActions
+			})
+		+e.body
+			block content
+		+e.footer
+			+footer
 		+scripts(['app.min.js'])

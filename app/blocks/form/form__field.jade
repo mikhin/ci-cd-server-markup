@@ -1,0 +1,9 @@
+mixin form__field(props)
+	- props = typeof props != 'undefined' ? props : {}
+
+	- var mods = props.mods || {}
+
+	.form__field(
+		class= mods.type ? 'form__field_type_#{mods.type}' : ""
+	)
+		block
