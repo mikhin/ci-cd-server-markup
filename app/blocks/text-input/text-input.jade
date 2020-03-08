@@ -9,11 +9,12 @@ mixin text-input(props)
 	- var label = data.label || ''
 	- var note = data.note || ''
 	- var required = attrs.required || false
+	- var id = data.id || ''
 
 	.text-input(class= (mods.type && 'text-input_type_#{mods.type}') || 'text-input')
-		+field-label({mods: {required: required}})= label
+		+field-label({mods: {required: required}, attrs:{for: id}})= label
 
-		input.text-input__content&attributes(attrs)
+		input.text-input__content&attributes(attrs)(id=id)
 
 		if note
 			span.text-input__note= note

@@ -10,6 +10,7 @@ mixin button(props)
 
 	- var icon = data.icon || false
 	- var text = data.text || false
+	- var hiddenText = data.hiddenText || false
 
 	#{tag}.button(
 		class= mods.theme ? 'button_theme_#{mods.theme}' : ""
@@ -22,3 +23,5 @@ mixin button(props)
 
 		if text
 			span.button__text= text
+		if hiddenText
+			span.button__hidden-text= text

@@ -20,7 +20,8 @@ mixin settings-form()
 						required: true
 					},
 					data: {
-						label: 'GitHub repository '
+						label: 'GitHub repository ',
+						id: 'username'
 					}
 				})
 			+form__field
@@ -29,7 +30,8 @@ mixin settings-form()
 						placeholder: 'npm ci && npm run build'
 					},
 					data: {
-						label: 'Build command'
+						label: 'Build command',
+						id: 'command'
 					}
 				})
 			+form__field
@@ -38,7 +40,8 @@ mixin settings-form()
 						placeholder: 'master'
 					},
 					data: {
-						label: 'Main branch'
+						label: 'Main branch',
+						id: 'branch'
 					}
 				})
 			+form__field({
@@ -55,7 +58,8 @@ mixin settings-form()
 					},
 					data: {
 						label: 'Synchronize every',
-						note: 'minutes'
+						note: 'minutes',
+						id: 'interval'
 					}
 				})
 			+form__actions

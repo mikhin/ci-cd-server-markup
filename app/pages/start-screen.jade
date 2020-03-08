@@ -1,7 +1,9 @@
 extends /blocks/layout-default/layout-default
 include ../blocks/start-screen-layout/start-screen-layout
-include ../blocks/start-screen-layout/start-screen-layout__welcome-action
 include ../blocks/welcome-action/welcome-action
+
+block page
+	- var pageMods = {view: 'start'}
 
 block head
 	- var pageTitle = 'Start screen';
@@ -12,6 +14,4 @@ block header
 
 block content
 	+start-screen-layout
-		+page-trim
-			+start-screen-layout__welcome-action
-				+welcome-action
+		+welcome-action

@@ -5,6 +5,7 @@
 		"icon": "run-build"
 	},
 	{
+		"hiddenText": "Settings",
 		"url": "/settings.html",
 		"icon": "settings"
 	}

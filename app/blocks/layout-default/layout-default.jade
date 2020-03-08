@@ -3,10 +3,12 @@ include ../header/header
 include ../footer/footer
 include ../scripts/scripts
 
+block page
+
 doctype html
 html(lang='ru')
 	include ../head/head
-	+page
+	+page({mods: pageMods})
 		.page__header
 			block header
 			+header({

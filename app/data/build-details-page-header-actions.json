@@ -5,6 +5,7 @@
 		"icon": "rebuild-build"
 	},
 	{
+		"hiddenText": "Settings",
 		"url": "/settings.html",
 		"icon": "settings"
 	}
