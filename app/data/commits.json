@@ -6,7 +6,7 @@
 		"hash": "9c9f0b9",
 		"author": "Philip Kirkorov",
 		"status": "success",
-		"url": "/"
+		"url": "/build-details.html"
 	},
 	{
 		"id": 1367,
@@ -15,7 +15,7 @@
 		"hash": "952e5567",
 		"author": "Vadim Makeev",
 		"status": "error",
-		"url": "/"
+		"url": "/build-details.html"
 	},
 	{
 		"id": 1366,
@@ -24,7 +24,7 @@
 		"hash": "b4636ab",
 		"author": "Philip Kirkorov",
 		"status": "success",
-		"url": "/"
+		"url": "/build-details.html"
 	},
 	{
 		"id": 1365,
@@ -33,7 +33,7 @@
 		"hash": "b4636ab",
 		"author": "Philip Kirkorov",
 		"status": "pending",
-		"url": "/"
+		"url": "/build-details.html"
 	},
 	{
 		"id": 1364,
@@ -42,7 +42,7 @@
 		"hash": "b4636ab",
 		"author": "Philip Kirkorov",
 		"status": "success",
-		"url": "/"
+		"url": "/build-details.html"
 	},
 	{
 		"id": 1367,
@@ -51,7 +51,7 @@
 		"hash": "952e5567",
 		"author": "Vadim Makeev",
 		"status": "error",
-		"url": "/"
+		"url": "/build-details.html"
 	},
 	{
 		"id": 1362,
@@ -60,7 +60,7 @@
 		"hash": "e41e4cc",
 		"author": "Philip Kirkorov",
 		"status": "success",
-		"url": "/"
+		"url": "/build-details.html"
 	},
 	{
 		"id": 1350,
@@ -69,7 +69,7 @@
 		"hash": "e41e4cc",
 		"author": "Philip Kirkorov",
 		"status": "success",
-		"url": "/"
+		"url": "/build-details.html"
 	},
 	{
 		"id": 1349,
@@ -78,6 +78,6 @@
 		"hash": "e41e4cc",
 		"author": "Philip Kirkorov",
 		"status": "success",
-		"url": "/"
+		"url": "/build-details.html"
 	}
 ]

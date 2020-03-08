@@ -6,10 +6,9 @@ mixin logo(props)
 
 	- var text = data.text || "School CI server"
 
-
 	if attrs.href
 		a.logo(
 			class= attrs.href ? 'logo_type_link' : ""
-		)&attributes(attrs) School CI server
+		)&attributes(attrs)= text
 	else
 		span.logo= text

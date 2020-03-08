@@ -1,0 +1,11 @@
+[
+	{
+		"text": "Rebuild",
+		"url": "/build-history.html",
+		"icon": "rebuild-build"
+	},
+	{
+		"url": "/settings.html",
+		"icon": "settings"
+	}
+]
