@@ -3,6 +3,9 @@
 	width 100%
 
 .text-input__content
+	position relative
+
+.text-input__input
 	display block
 	width 100%
 	margin-top var(--space_xxs)
@@ -26,8 +29,9 @@
 	display flex
 	align-items center
 
-	.text-input__content
+	.text-input__input
 		-webkit-appearance none
+		display inline
 		width 52px
 		margin-top 0
 		margin-left var(--space_xs)
@@ -35,3 +39,25 @@
 
 .text-input__note
 	margin-left var(--space_xs)
+
+.text-input__clear-button
+	font-size 0
+	background-color transparent
+	border none
+	width 16px
+	height 16px
+	background-image url('/assets/images/clear-button.svg')
+	background-size contain
+	background-repeat no-repeat
+	position absolute
+	right 10px
+	top 50%
+	transform translateY(-50%)
+
+	&:hover, &:focus
+		opacity .5
+		cursor pointer
+
+	&:focus
+		outline none
+

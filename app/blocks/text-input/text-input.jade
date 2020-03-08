@@ -10,11 +10,16 @@ mixin text-input(props)
 	- var note = data.note || ''
 	- var required = attrs.required || false
 	- var id = data.id || ''
+	- var clearButton  = data.clearButton || false
 
 	.text-input(class= (mods.type && 'text-input_type_#{mods.type}') || 'text-input')
 		+field-label({mods: {required: required}, attrs:{for: id}})= label
 
-		input.text-input__content&attributes(attrs)(id=id)
+		.text-input__content
+			input.text-input__input&attributes(attrs)(id=id)
 
-		if note
-			span.text-input__note= note
+			if clearButton
+				button.text-input__clear-button(type='button') Очистить поле
+
+			if note
+				span.text-input__note= note
