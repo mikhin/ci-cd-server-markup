@@ -7,17 +7,9 @@
 	&:focus
 		outline none
 
-.button_theme_secondary
-	background #E6E6E6
-	border-radius 4px
-	font-size 13px
-	line-height 13px
-	color black
-	padding 20px
-	padding-top 12px
-	padding-bottom 12px
-
 .button_theme_primary
+	text-align center
+	box-sizing border-box
 	background #FFCC00
 	border-radius 4px
 	font-size 13px
@@ -27,10 +19,49 @@
 	padding-top 12px
 	padding-bottom 12px
 
-.button_type_wide
-	width 100%
+	&:hover
+		background-color #F2C200
+
+	&:focus
+		box-shadow 0 0 0 2px #B38F00
+
+.button_theme_secondary
+	text-align center
+	background #E6E6E6
+	border-radius 4px
+	font-size 13px
+	line-height 13px
+	color black
+	padding 20px
+	padding-top 12px
+	padding-bottom 12px
+
+	&:hover
+		background-color #DBDBDB
+
+	&:focus
+		box-shadow 0 0 0 2px #B3B3B3
+
+.button_theme_additional
+	background #E6E6E6
+	border-radius 4px
+	font-size 13px
+	line-height 100%
+	color black
+	padding 12px 20px
+	text-align center
+
+	@media (min-width 1024px)
+		padding 8px 14px
+
+	&:hover
+		background-color #DBDBDB
+
+	&:focus
+		box-shadow 0 0 0 2px #B3B3B3
 
 .button_theme_navigation
+	box-sizing border-box
 	display flex
 	align-items center
 	background #E6E6E6
@@ -42,6 +73,12 @@
 
 	@media (min-width 1024px)
 		padding-right 13px
+
+	&:hover
+		background-color #DBDBDB
+
+	&:focus
+		box-shadow 0 0 0 2px #B3B3B3
 
 	.button__icon
 		width 12px
@@ -63,15 +100,3 @@
 		.button__icon
 			@media (min-width 1024px)
 				margin-right 0
-
-.button_theme_additional
-	background #E6E6E6
-	border-radius 4px
-	font-size 13px
-	line-height 100%
-	color black
-	padding 12px 20px
-	text-align center
-
-	@media (min-width 1024px)
-		padding 8px 14px

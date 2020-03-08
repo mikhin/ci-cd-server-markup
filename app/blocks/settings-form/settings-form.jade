@@ -61,9 +61,11 @@ mixin settings-form()
 			+form__actions
 				+form__action
 					+button({
+						attrs: {
+							href: '/start-screen.html',
+						},
 						mods: {
-							theme: 'primary',
-							type: 'wide'
+							theme: 'primary'
 						},
 						data: {
 							text: 'Save'
@@ -71,9 +73,11 @@ mixin settings-form()
 					})
 				+form__action
 					+button({
+						attrs: {
+							href: '/start-screen.html',
+						},
 						mods: {
-							theme: 'secondary',
-							type: 'wide'
+							theme: 'secondary'
 						},
 						data: {
 							text: 'Cancel'
