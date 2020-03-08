@@ -1,8 +1,0 @@
-mixin field-label(props)
-	- props = typeof props != 'undefined' ? props : {}
-
-	- var mods = props.mods || {}
-	- var attrs = props.attrs || {}
-
-	label.field-label(class= mods.required ? 'field-label_required' : "")&attributes(attrs)
-		block

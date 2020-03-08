@@ -1,5 +1,0 @@
-mixin page(props)
-	- var mods = props.mods || {}
-
-	body.page(class= mods.view ? 'page_view_#{mods.view}' : "")
-		block

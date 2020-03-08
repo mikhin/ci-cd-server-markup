@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Settings</title>
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+		<link href="/assets/styles/app.min.css" rel="stylesheet">
+	</head>
+
+	<body class="page">
+		<div class="page__header">
+			<header class="header">
+				<div class="page-trim">
+					<div class="header__content">
+						<div class="header__logo"><a class="logo logo_type_link" href="/index.html">School CI server</a>
+						</div>
+					</div>
+				</div>
+			</header>
+		</div>
+		<div class="page__body">
+			<div class="page-trim">
+				<div class="settings-layout">
+					<div class="settings-layout__form">
+						<div class="settings-form">
+							<form class="form">
+								<h2 class="form__title">Settings</h2>
+								<p class="form__description">Configure repository connection and synchronization
+									settings.</p>
+								<div class="form__field">
+									<div class="text-input text-input"><label class="field-label field-label_required"
+										 for="username">GitHub repository </label>
+										<div class="text-input__content"><input id="username" class="text-input__input"
+											 placeholder="user-name/repo-name" required="required" /></div>
+									</div>
+								</div>
+								<div class="form__field">
+									<div class="text-input text-input"><label class="field-label" for="command">Build
+											command</label>
+										<div class="text-input__content"><input id="command" class="text-input__input"
+											 placeholder="npm ci && npm run build" /><button type="button"
+											 class="text-input__clear-button">Очистить поле</button></div>
+									</div>
+								</div>
+								<div class="form__field">
+									<div class="text-input text-input"><label class="field-label" for="branch">Main
+											branch</label>
+										<div class="text-input__content"><input id="branch" class="text-input__input"
+											 placeholder="master" /><button type="button"
+											 class="text-input__clear-button">Очистить поле</button></div>
+									</div>
+								</div>
+								<div class="form__field form__field_type_time">
+									<div class="text-input text-input_type_time"><label class="field-label"
+										 for="interval">Synchronize every</label>
+										<div class="text-input__content"><input id="interval" class="text-input__input"
+											 placeholder="10" /><span class="text-input__note">minutes</span></div>
+									</div>
+								</div>
+								<div class="form__actions">
+									<div class="form__action"><a class="button button_theme_primary"
+										 href="/start-screen.html"><span class="button__text">Save</span></a></div>
+									<div class="form__action"><a class="button button_theme_secondary"
+										 href="/start-screen.html"><span class="button__text">Cancel</span></a></div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="page__footer">
+			<footer class="footer">
+				<div class="page-trim">
+					<div class="footer__content">
+						<ul class="footer__menu">
+							<li class="footer__menu-item"><a href="javascript:void(0)"
+								 class="footer__menu-item-content">Support</a></li>
+							<li class="footer__menu-item"><a href="javascript:void(0)"
+								 class="footer__menu-item-content">Learning</a></li>
+						</ul>
+						<p class="footer__logo">&copy; 2020 Yuri Mikhin</p>
+					</div>
+				</div>
+			</footer>
+		</div>
+		<script src="/assets/scripts/app.min.js"></script>
+	</body>
+
+</html>
