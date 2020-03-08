@@ -1,0 +1,23 @@
+extends /blocks/layout-default/layout-default
+include ../blocks/build-history-layout/build-history-layout
+include ../blocks/build-history-layout/build-history-layout__commit-list
+include ../blocks/commit-list/commit-list
+
+block head
+	- var pageTitle = 'Build history';
+
+block header
+	- var headerActions = getData('build-history-page-header-actions');
+	- var headerTitle = 'philip1967/my-awesome-repo';
+	// philip1967/my-aw esome-repo-with-long-long-long-repo-name
+
+block content
+	- var commits = getData('commits');
+
+	+build-history-layout
+		+build-history-layout__commit-list
+			+commit-list({
+				data: {
+					commits: commits,
+				}
+			})

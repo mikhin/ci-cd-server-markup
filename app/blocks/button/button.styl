@@ -2,6 +2,7 @@
 	display block
 	border none
 	background-color transparent
+	text-decoration none
 
 	&:focus
 		outline none
@@ -25,9 +26,6 @@
 	padding 20px
 	padding-top 12px
 	padding-bottom 12px
-
-.button_type_link
-	text-decoration none
 
 .button_type_wide
 	width 100%
@@ -58,3 +56,22 @@
 		@media (min-width 1024px)
 			display block
 
+	&.button_only-icon
+		@media (min-width 1024px)
+			padding-right 8px
+
+		.button__icon
+			@media (min-width 1024px)
+				margin-right 0
+
+.button_theme_additional
+	background #E6E6E6
+	border-radius 4px
+	font-size 13px
+	line-height 100%
+	color black
+	padding 12px 20px
+	text-align center
+
+	@media (min-width 1024px)
+		padding 8px 14px

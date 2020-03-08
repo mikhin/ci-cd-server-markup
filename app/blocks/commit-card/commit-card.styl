@@ -1,0 +1,208 @@
+.commit-card
+	padding 16px 12px
+	position relative
+
+	@media (min-width 1024px)
+		padding 12px 16px
+
+	&::before
+		position absolute
+		top 16px
+		left 12px
+		content ''
+		display inline-block
+		width 16px
+		height 16px
+		background-size contain
+		background-repeat no-repeat
+		margin-right 4px
+
+		@media (min-width 1024px)
+			width 24px
+			height 24px
+			top 13px
+			left 24px
+
+
+.commit-card__content
+	margin-left 24px
+
+	@media (min-width 1024px)
+		display flex
+		flex-wrap wrap
+		margin-left 40px
+
+.commit-card__header
+	margin-bottom 5px
+
+	@media (min-width 1024px)
+		display flex
+		align-items flex-start
+		margin 0
+		height
+
+.commit-card__id
+	display block
+	font-weight 500
+	font-size 16px
+	line-height 16px
+	margin-bottom 8px
+
+	@media (min-width 1024px)
+		font-size 18px
+		line-height 20px
+		margin-bottom 0
+		margin-right 4px
+
+.commit-card__title
+	margin 0
+	font-weight 400
+
+.commit-card__link
+	display block
+	font-size 15px
+	line-height 20px
+	color #000000
+	text-decoration none
+
+	&::after
+		content ''
+		position absolute
+		border-radius 6px
+		box-shadow 0 1px 1px rgba(67, 68, 69, .3), 0 0 1px rgba(67, 68, 69, .3)
+		top 0
+		right 0
+		left 0
+		bottom 0
+
+	&:hover, &:focus
+		&::after
+			box-shadow 0 2px 8px rgba(67, 68, 69, .3), 0 0 1px rgba(67, 68, 69, .3)
+
+.commit-card__details
+	margin 0
+	padding-bottom 8px
+	border-bottom 1px solid #F0F2F3
+	margin-bottom 8px
+
+	@media (min-width 1024px)
+		position absolute
+		z-index -1
+		bottom 4px
+		padding-bottom 0
+		border-bottom 0
+		order 1
+		width 100%
+
+.commit-card__author
+	display flex
+	align-items center
+	margin-top 8px
+	font-size 13px
+	line-height 16px
+	color #000000
+
+	@media (min-width 1024px)
+		display inline-block
+
+	&::before
+		content ''
+		display inline-block
+		vertical-align top
+		width 14px
+		height 16px
+		background-image url('/assets/images/commit-author.svg')
+		background-size contain
+		background-repeat no-repeat
+		margin-right 6px
+
+.commit-card__branch
+	font-size 13px
+	line-height 16px
+	color #000000
+	margin-right 4px
+
+	&::before
+		content ''
+		display inline-block
+		width 16px
+		height 8px
+		background-image url('/assets/images/commit-branch.svg')
+		background-size contain
+		background-repeat no-repeat
+		margin-right 4px
+
+.commit-card__hash
+	font-size 13px
+	line-height 16px
+	color #595959
+
+	@media (min-width 1024px)
+		margin-right 10px
+
+.commit-card__hidden-note
+	visuallyHidden()
+
+.commit-card__meta
+	margin 0
+	font-size 13px
+	line-height 16px
+	color #595959
+
+	@media (min-width 1024px)
+		margin-left auto
+		display flex
+		flex-direction column
+
+.commit-card__datetime
+	display inline-flex
+	align-items center
+	margin-right 10px
+
+	@media (min-width 1024px)
+		margin-bottom 12px
+
+	&::before
+		content ''
+		display inline-block
+		width 14px
+		height 16px
+		background-image url('/assets/images/build-datetime.svg')
+		background-size contain
+		background-repeat no-repeat
+		margin-right 6px
+
+.commit-card__duration
+	display inline-flex
+	align-items center
+
+	&::before
+		content ''
+		display inline-block
+		width 13px
+		height 16px
+		background-image url('/assets/images/build-duration.svg')
+		background-size contain
+		background-repeat no-repeat
+		margin-right 6px
+
+.commit-card_type_success
+	&::before
+		background-image url('/assets/images/commit-card--success.svg')
+
+	.commit-card__id
+		color #00B341
+
+.commit-card_type_error
+	&::before
+		background-image url('/assets/images/commit-card--error.svg')
+
+	.commit-card__id
+		color #FF3333
+
+.commit-card_type_pending
+	&::before
+		background-image url('/assets/images/commit-card--pending.svg')
+
+	.commit-card__id
+		color #FF9A00

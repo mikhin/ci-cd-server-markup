@@ -1,6 +1,7 @@
 [
 	{
 		"text": "Settings",
-		"url": "/settings.html"
+		"url": "/settings.html",
+		"icon": "settings"
 	}
 ]

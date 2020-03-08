@@ -1,0 +1,14 @@
+extends /blocks/layout-default/layout-default
+include ../blocks/build-history-layout/build-history-layout
+include ../blocks/build-history-layout/build-history-layout__commit-list
+include ../blocks/commit-list/commit-list
+include ../blocks/pages-list/pages-list
+include ../blocks/page-trim/page-trim
+
+block head
+	- var pageTitle = 'Index';
+
+block content
+	+page-trim
+		+pages-list
+

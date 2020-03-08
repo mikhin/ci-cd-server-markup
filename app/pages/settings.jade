@@ -1,13 +1,16 @@
 extends /blocks/layout-default/layout-default
 include ../blocks/settings-form/settings-form
-include ../blocks/settings-page-layout/settings-page-layout
-include ../blocks/settings-page-layout/settings-page-layout__form
+include ../blocks/settings-layout/settings-layout
+include ../blocks/settings-layout/settings-layout__form
 
 block head
 	- var pageTitle = 'Settings';
 
+block header
+	- var headerURL = '/index.html'
+
 block content
 	+page-trim
-		+settings-page-layout
-			+settings-page-layout__form
+		+settings-layout
+			+settings-layout__form
 				+settings-form

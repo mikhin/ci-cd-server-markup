@@ -1,0 +1,44 @@
+include ../commit-card/commit-card
+include ../button/button
+
+mixin commit-list(props)
+	- props = typeof props != 'undefined' ? props : {}
+
+	- var mods = props.mods || {}
+	- var tag = props.attrs && props.attrs.href ? 'a' : 'button'
+	- var data = props.data || {}
+	- var attrs = props.attrs || {}
+
+	- var commits = data.commits || undefined
+
+	.commit-list
+		+page-trim
+			ul.commit-list__content
+				each commit in commits
+					li.commit-list__item
+						+commit-card({
+							data: {
+								id: commit.id,
+								title: commit.title,
+								branch: commit.branch,
+								hash: commit.hash,
+								author: commit.author,
+								url: commit.url,
+							},
+							mods: {
+								type: commit.status,
+							}
+						})
+			.commit-list__action
+				+button({
+					mods: {
+						theme: 'additional',
+					},
+					attrs: {
+						href: '/',
+					},
+					data: {
+						text: 'Show more',
+					}
+				})
+

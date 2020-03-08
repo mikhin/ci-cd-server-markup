@@ -2,10 +2,14 @@ mixin logo(props)
 	- props = typeof props != 'undefined' ? props : {}
 
 	- var attrs = props.attrs || {}
+	- var data = props.data || {}
+
+	- var text = data.text || "School CI server"
+
 
 	if attrs.href
 		a.logo(
-			class='logo_type_link'
+			class= attrs.href ? 'logo_type_link' : ""
 		)&attributes(attrs) School CI server
 	else
-		span.logo School CI server
+		span.logo= text

@@ -1,0 +1,11 @@
+[
+	{
+		"text": "Run build",
+		"url": "/build-details.html",
+		"icon": "run-build"
+	},
+	{
+		"url": "/settings.html",
+		"icon": "settings"
+	}
+]

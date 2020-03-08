@@ -9,16 +9,16 @@ mixin button(props)
 	- var attrs = props.attrs || {}
 
 	- var icon = data.icon || false
+	- var text = data.text || false
 
 	#{tag}.button(
 		class= mods.theme ? 'button_theme_#{mods.theme}' : ""
 		class= mods.type ? 'button_type_#{mods.type}' : ""
-		class= icon ? 'button_iconed' : ""
-		class= tag === 'a' ? 'button_type_link' : ""
+		class= !text && icon ? 'button_only-icon' : ""
 	)&attributes(attrs)
 		if icon
 			.button__icon(class="button__icon_type_#{icon}")
 				+icon(icon, true)
 
-		span.button__text
-			block
+		if text
+			span.button__text= text

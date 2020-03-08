@@ -1,0 +1,35 @@
+mixin commit-card(props)
+	- props = typeof props != 'undefined' ? props : {}
+
+	- var mods = props.mods || {}
+	- var tag = props.attrs && props.attrs.href ? 'a' : 'button'
+	- var data = props.data || {}
+	- var attrs = props.attrs || {}
+
+	- var id = data.id || ''
+	- var title = data.title || ''
+	- var branch = data.branch || ''
+	- var hash = data.hash || ''
+	- var author = data.author || ''
+	- var url = data.url || ''
+
+	article.commit-card(class= mods.type ? 'commit-card_type_#{mods.type}' : "")
+		.commit-card__content
+			.commit-card__header
+				span.commit-card__id= "#" + id
+				h2.commit-card__title
+					a.commit-card__link(href=url)= title
+			p.commit-card__details
+				span.commit-card__hidden-note Целевая ветка слияния:
+				span.commit-card__branch= branch
+				span.commit-card__hidden-note Хеш коммита:
+				span.commit-card__hash= hash
+				span.commit-card__hidden-note Автор коммита:
+				span.commit-card__author= author
+			p.commit-card__meta
+				span.commit-card__hidden-note Время и дата начала сборки билда:
+				span.commit-card__datetime 21 янв, 03:06
+				span.commit-card__hidden-note Длительность сборки билда:
+				span.commit-card__duration 1 ч 20 мин
+
+

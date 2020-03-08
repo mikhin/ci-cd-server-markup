@@ -2,14 +2,26 @@
 	display flex
 	padding-top 12px
 	padding-bottom 12px
-	align-items center
+	align-items flex-start
 
 	@media (min-width 1024px)
 		padding-top 10px
 		padding-bottom 10px
 
 .header__actions
+	display flex
 	list-style-type none
 	margin 0
 	padding 0
 	margin-left auto
+	justify-content flex-end
+
+	@media (min-width 1024px)
+		min-width 140px
+
+.header__action-item
+	&:not(:last-child)
+		margin-right 8px
+
+.header__logo
+	margin-right 8px

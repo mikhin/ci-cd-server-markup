@@ -7,29 +7,35 @@ mixin header(props)
 
 	- var data = props.data || {}
 	- var actions = data.actions || undefined
+	- var logoText = data.logoText || undefined
+	- var logoURL = data.logoURL || undefined
 
 	header.header
 		+page-trim
 			.header__content
-				+logo({
-					attrs: {
-						href: '/start-screen.html',
-					}
-				})
+				.header__logo
+					+logo({
+						attrs: {
+							href: logoURL
+						},
+						data: {
+							text: logoText
+						}
+					})
 
 				if actions
 					ul.header__actions
 						each action in actions
 							li.header__action-item
-								.header__action
-									+button({
-										mods: {
-											theme: 'navigation',
-										},
-										attrs: {
-											href: action.url,
-										},
-										data: {
-											icon: 'settings',
-										}
-									})= action.text
+								+button({
+									mods: {
+										theme: 'navigation'
+									},
+									attrs: {
+										href: action.url
+									},
+									data: {
+										icon: action.icon,
+										text: action.text
+									}
+								})
