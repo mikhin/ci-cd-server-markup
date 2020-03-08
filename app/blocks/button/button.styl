@@ -15,9 +15,9 @@
 	font-size 13px
 	line-height 16px
 	color var(--color_text_primary)
-	padding 20px
-	padding-top 12px
-	padding-bottom 12px
+	padding var(--space_xl)
+	padding-top var(--space_m)
+	padding-bottom var(--space_m)
 
 	&:hover
 		background-color var(--color_button_bg_primary_accent)
@@ -32,9 +32,9 @@
 	font-size 13px
 	line-height 16px
 	color var(--color_text_primary)
-	padding 20px
-	padding-top 12px
-	padding-bottom 12px
+	padding var(--space_xl)
+	padding-top var(--space_m)
+	padding-bottom var(--space_m)
 
 	&:hover
 		background-color var(--color_button_bg_secondary_accent)
@@ -48,11 +48,11 @@
 	font-size 13px
 	line-height 16px
 	color var(--color_text_primary)
-	padding 12px 20px
+	padding var(--space_m) var(--space_xl)
 	text-align center
 
 	@media (min-width 1024px)
-		padding 8px 14px
+		padding var(--space_xs) 14px
 
 	&:hover
 		background-color var(--color_button_bg_secondary_accent)
@@ -67,9 +67,9 @@
 	background var(--color_button_bg_secondary)
 	border-radius 4px
 	font-size 13px
-	line-height 12px
+	line-height var(--space_m)
 	color var(--color_text_primary)
-	padding 8px
+	padding var(--space_xs)
 
 	@media (min-width 1024px)
 		padding-right 13px
@@ -81,11 +81,11 @@
 		box-shadow 0 0 0 2px var(--color_border_primary)
 
 	.button__icon
-		width 12px
-		height 12px
+		width var(--space_m)
+		height var(--space_m)
 
 		@media (min-width 1024px)
-			margin-right 6px
+			margin-right var(--space_xxs)
 
 	.button__text
 		display none
@@ -95,7 +95,7 @@
 
 	&.button_only-icon
 		@media (min-width 1024px)
-			padding-right 8px
+			padding-right var(--space_xs)
 
 		.button__icon
 			@media (min-width 1024px)

@@ -1,30 +1,30 @@
 .commit-card
-	padding 16px 12px
+	padding var(--space_l) var(--space_m)
 	position relative
 
 	@media (min-width 1024px)
-		padding 12px 16px
+		padding var(--space_m) var(--space_l)
 
 	&::before
 		position absolute
-		top 16px
-		left 12px
+		top var(--space_l)
+		left var(--space_m)
 		content ''
 		display inline-block
-		width 16px
-		height 16px
+		width var(--space_l)
+		height var(--space_l)
 		background-size contain
 		background-repeat no-repeat
 		margin-right 4px
 
 		@media (min-width 1024px)
-			width 24px
-			height 24px
+			width var(--space_xxl)
+			height var(--space_xxl)
 			top 13px
-			left 24px
+			left var(--space_xxl)
 
 .commit-card__content
-	margin-left 24px
+	margin-left var(--space_xxl)
 
 	@media (min-width 1024px)
 		display flex
@@ -45,7 +45,7 @@
 	font-weight 500
 	font-size 16px
 	line-height 16px
-	margin-bottom 8px
+	margin-bottom var(--space_xs)
 
 	@media (min-width 1024px)
 		font-size 18px
@@ -71,7 +71,7 @@
 	&::after
 		content ''
 		position absolute
-		border-radius 6px
+		border-radius var(--space_xxs)
 		box-shadow 0 1px 1px rgba(67, 68, 69, .3), 0 0 1px rgba(67, 68, 69, .3)
 		top 0
 		right 0
@@ -80,13 +80,13 @@
 
 	&:hover, &:focus
 		&::after
-			box-shadow 0 2px 8px rgba(67, 68, 69, .3), 0 0 1px rgba(67, 68, 69, .3)
+			box-shadow 0 2px var(--space_xs) rgba(67, 68, 69, .3), 0 0 1px rgba(67, 68, 69, .3)
 
 .commit-card__details
 	margin 0
-	padding-bottom 8px
+	padding-bottom var(--space_xs)
 	border-bottom 1px solid var(--color_border_secondary)
-	margin-bottom 8px
+	margin-bottom var(--space_xs)
 
 	@media (min-width 1024px)
 		position absolute
@@ -100,7 +100,7 @@
 .commit-card__author
 	display flex
 	align-items center
-	margin-top 8px
+	margin-top var(--space_xs)
 	font-size 13px
 	line-height 16px
 	color var(--color_text_primary)
@@ -113,11 +113,11 @@
 		display inline-block
 		vertical-align top
 		width 14px
-		height 16px
+		height var(--space_l)
 		background-image url('/assets/images/commit-author.svg')
 		background-size contain
 		background-repeat no-repeat
-		margin-right 6px
+		margin-right var(--space_xxs)
 
 .commit-card__branch
 	font-size 13px
@@ -128,8 +128,8 @@
 	&::before
 		content ''
 		display inline-block
-		width 16px
-		height 8px
+		width var(--space_l)
+		height var(--space_xs)
 		background-image url('/assets/images/commit-branch.svg')
 		background-size contain
 		background-repeat no-repeat
@@ -141,7 +141,7 @@
 	color var(--color_text_secondary)
 
 	@media (min-width 1024px)
-		margin-right 10px
+		margin-right var(--space_s)
 
 .commit-card__hidden-note
 	visuallyHidden()
@@ -160,20 +160,20 @@
 .commit-card__datetime
 	display inline-flex
 	align-items center
-	margin-right 10px
+	margin-right var(--space_s)
 
 	@media (min-width 1024px)
-		margin-bottom 12px
+		margin-bottom var(--space_m)
 
 	&::before
 		content ''
 		display inline-block
 		width 14px
-		height 16px
+		height var(--space_l)
 		background-image url('/assets/images/build-datetime.svg')
 		background-size contain
 		background-repeat no-repeat
-		margin-right 6px
+		margin-right var(--space_xxs)
 
 .commit-card__duration
 	display inline-flex
@@ -183,11 +183,11 @@
 		content ''
 		display inline-block
 		width 13px
-		height 16px
+		height var(--space_l)
 		background-image url('/assets/images/build-duration.svg')
 		background-size contain
 		background-repeat no-repeat
-		margin-right 6px
+		margin-right var(--space_xxs)
 
 .commit-card_type_success
 	&::before
@@ -212,14 +212,14 @@
 
 .commit-card_view_detail
 	box-shadow 0 1px 1px rgba(67, 68, 69, .3), 0 0 1px rgba(67, 68, 69, .3)
-	border-radius 6px
+	border-radius var(--space_xxs)
 
 	.commit-card__content
 		display block
 
 	.commit-card__details
 		position static
-		padding-bottom 8px
+		padding-bottom var(--space_xs)
 		border-bottom 1px solid var(--color_border_secondary)
 
 	.commit-card__meta
